@@ -1,14 +1,12 @@
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  IconButton,
-  Typography,
-} from "@material-ui/core";
-import { DeleteOutlined } from "@material-ui/icons";
-import React from "react";
+import React from 'react'
+import Card from '@material-ui/core/Card'
+import CardHeader from '@material-ui/core/CardHeader'
+import CardContent from '@material-ui/core/CardContent'
+import IconButton from '@material-ui/core/IconButton'
+import Typography from '@material-ui/core/Typography'
+import DeleteOutlined from '@material-ui/icons/DeleteOutlined'
 
-const NoteCard = ({ note, handleDelete }) => {
+export default function NoteCard({ note, handleDelete }) {
   return (
     <div>
       <Card elevation={1}>
@@ -23,12 +21,10 @@ const NoteCard = ({ note, handleDelete }) => {
         />
         <CardContent>
           <Typography variant="body2" color="textSecondary">
-            {note.details}
+            { note.details }
           </Typography>
         </CardContent>
       </Card>
     </div>
-  );
-};
-
-export default NoteCard;
+  )
+}
